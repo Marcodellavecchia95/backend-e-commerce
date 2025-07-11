@@ -2,12 +2,12 @@ import express from "express";
 import { google } from "googleapis";
 import { readFileSync } from "fs";
 import fetch from "node-fetch";
+import dotenv from "dotenv";
+dotenv.config();
 
 const router = express.Router();
 
-const serviceAccount = JSON.parse(
-  readFileSync("service-account.json", "utf-8")
-);
+const serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY);
 const PROJECT_ID = serviceAccount.project_id;
 
 const auth = new google.auth.GoogleAuth({
