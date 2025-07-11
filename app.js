@@ -4,7 +4,7 @@ import cors from "cors";
 import router from "./routers/router.js";
 import stripeRouter from "./routers/stripeRouter.js";
 import dialogflowRouter from "./routers/dialogflowRouter.js";
-import addImageUrl from "./middlewares/AddImageUrl.js";
+import addImageUrl from "./middlewares/addImageUrl.js";
 import productImagesRouter from "./routers/productImages.js";
 
 const app = express();
